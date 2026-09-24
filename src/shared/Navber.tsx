@@ -2,6 +2,8 @@ import Link from 'next/link';
 import logo from '@/assets/logo.png';
 import Image from 'next/image';
 import NavLinks from '@/components/NavLinks';
+import NavberPlanBtn from '@/components/NavberPlanBtn';
+import NavberSavedBtn from '@/components/NavberSavedBtn';
 
 const Navber = () => {
   return (
@@ -33,27 +35,19 @@ const Navber = () => {
             <NavLinks />
           </ul>
         </div>
-        <Link href={'/'} className="flex items-center">
+        <Link href={'/'} className="flex items-center gap-2">
           <Image src={logo} alt="nav logo" width={30} height={30} />
-          <span className="btn btn-ghost text-xl">FitLog</span>
+          <span className="text-xl">FitLog</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 gap-2">
           <NavLinks />
         </ul>
       </div>
       <div className="navbar-end text-sm">
-        <div className="flex items-center gap-1 hover:bg-[#14181d] px-3 py-2 rounded-xl">
-          <button>Plan</button>
-          <span className=" px-2.5 text-black bg-[#c4f000] rounded-2xl">0</span>
-        </div>
-        <div className="flex items-center gap-1 hover:bg-[#14181d] px-3 py-2 rounded-xl">
-          <button>Save</button>
-          <span className=" px-2.5 border border-[#ededed]  rounded-2xl">
-            0
-          </span>
-        </div>
+        <NavberPlanBtn />
+        <NavberSavedBtn />
       </div>
     </div>
   );
