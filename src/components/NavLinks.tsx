@@ -11,8 +11,10 @@ const NavLinks = () => {
       >
         <Link href={'/'}>Workouts</Link>
       </li>
-      <li>
-        <Link href={'/'}>My Plan</Link>
+      <li
+        className={`${pathname === '/my-plan' ? 'text-[#c4f000] bg-[#1d232a] rounded hover:bg-[#1d232a]' : ''}`}
+      >
+        <Link href={'/my-plan'}>My Plan</Link>
       </li>
     </>
   );

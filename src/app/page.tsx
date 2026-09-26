@@ -3,7 +3,7 @@ import Library from '@/components/Library';
 
 const page = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <Banner />
       <Library />
     </div>
